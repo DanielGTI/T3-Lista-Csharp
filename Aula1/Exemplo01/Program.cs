@@ -53,6 +53,39 @@ namespace Lista_Exercicio_Manha
             }
         }
 
+        public static void ex_05()
+        {
+            double nota1, nota2, nota3, media, menor;
+            Console.Write("Digite o 1º notas: ");
+            nota1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Digite o 2º notas: ");
+            nota2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Digite o 3º notas: ");
+            nota3 = Convert.ToDouble(Console.ReadLine());
+
+            menor = nota1;
+
+            if (nota2 < menor)
+                menor = nota2;
+
+            if (nota3 < menor)
+                menor = nota3;
+
+            media = (nota1 + nota2 + nota3 - menor) / 2.0;
+            Console.WriteLine("Media = " + media);
+            if (media >= 6.0)
+            {
+                Console.WriteLine("Aprovado");
+            }
+            else
+            {
+                Console.WriteLine("Reprovado");
+            }
+
+        }
+
         static void Main(string[] args)
         {
             int prog = 1;
@@ -77,6 +110,8 @@ namespace Lista_Exercicio_Manha
                         Program.ex_03(); break;
                     case 4:
                         Program.ex_04(); break;
+                    case 5:
+                        Program.ex_05(); break;
                     default:
                         Console.WriteLine("Programa não disponível"); break;
                 }
